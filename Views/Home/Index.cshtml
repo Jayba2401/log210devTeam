@@ -1,0 +1,197 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+ <div class="col-lg-12" style="padding-bottom:20px">
+        <form class="navbar-form" role="search">
+        <div class="input-group" style="padding-left:325px; padding-top:20px">
+            <input type="text" class="form-control" placeholder="Search book..." name="q" size="30">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Compte gestionnaire
+                <i class="glyphicon glyphicon-user pull-right"></i>
+                </div>
+            <div class="panel-body">
+                <ul>
+                    <li>
+                        Recevoir un livre
+                    </li>
+                     <li>
+                        Remettre un livre
+                    </li>
+                    <li>
+                        Échanger des livres
+                    </li>
+                </ul>
+
+            <button class="btn btn-info" data-toggle="modal" data-target="#managerModal">
+                Creer compte gestionnaire
+            </button>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="panel panel-info">
+           <div class="panel-heading">
+               Compte étudiant
+                <i class="glyphicon glyphicon-pencil pull-right"></i>
+               </div>
+            <div class="panel-body">
+                <ul>
+                    <li>
+                        Ajouter livre
+                    </li>
+                     <li>
+                        Réserver un livre
+                    </li>
+                     <li>
+                        Récupérer un livre
+                    </li>
+                </ul>
+
+              <button class="btn btn-info" data-toggle="modal" data-target="#studentModal">
+                Créer un compte étudiant
+            </button>
+  </div>
+        </div>
+    </div>
+
+
+ <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Ajout d'un livre
+                <i class="glyphicon glyphicon-book pull-right"></i>
+                </div>
+            <div class="panel-body">
+                 <ul>
+                    <li>
+                        Ajoute un livre dans le système d'échange et de vente
+                    </li>
+                </ul>
+            <button class="btn btn-info">
+                Ajouter un livre
+            </button>
+        </div>
+        </div>
+    </div>
+
+
+ <div class="col-md-3">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Réservation d'un livre
+                   <i class="glyphicon glyphicon-tags pull-right"></i>
+                </div>
+            <div class="panel-body">
+                <ul>
+                    <li>
+                        Réserve un livre se trouvant dans le système d'échange et de vente
+                    </li>
+                </ul>
+            <button class="btn btn-info">
+                Réserver un livre
+            </button>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal gestionnaire-->
+<div id="managerModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title ">Création d'un compte gestionnaire</h4>
+      </div>
+      <div class="modal-body">
+        <form style="padding-left:30px">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+             </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Nom du compte</label>
+                <input type="text" class="form-control" placeholder="Nom du compte...">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Mot de passe</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Adresse</label>
+                <input type="text" class="form-control" placeholder="Adresse...">
+            </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="studentModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title ">Création d'un compte étudiant</h4>
+      </div>
+      <div class="modal-body">
+        <form style="padding-left:30px">
+            <div class="form-group">
+                <label for="exampleInputPassword1">Prénom</label>
+                <input type="text" class="form-control" placeholder="Nom du compte...">
+            </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Nom</label>
+                <input type="text" class="form-control" placeholder="Nom du compte...">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Mot de passe</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Adresse</label>
+                <input type="text" class="form-control" placeholder="Adresse...">
+            </div>
+            <div class="form-group">
+                <label for="exampleSelect1">Example select</label>
+                 <select class="form-control" id="exampleSelect1">
+                     <option>École de Technologie Supérieure</option>
+                     <option>McGill</option>
+                     <option>Concordia University</option>
+                     <option>Université de Sherbrooke</option>
+                     <option>Université du Québec à Montréal</option>
+                </select>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
